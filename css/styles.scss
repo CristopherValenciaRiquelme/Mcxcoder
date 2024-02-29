@@ -1,0 +1,393 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* VARIABLES */
+
+//Colores
+$color-marron-oscuro: #8B4513;
+$color-marron-claro: #ae6847;
+$color-marron-mas-claro: #c2906c;
+
+//Logo
+$color-marron-claro-logo: #ab754e;
+
+//footer
+$color-gris-claro: #333;
+$color-crema: #FFF8E7;
+$color-blanco: #fff;
+
+
+/* Estilos Globales */
+#body {
+  background-color: $color-marron-claro-logo; 
+
+  text-align: center;
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Estilos de las áreas de la página */
+#header {
+  grid-area: header;
+  background-color: $color-marron-oscuro;
+  
+  
+  height: auto;
+  width: 100%; 
+
+  flex-direction: column; 
+  white-space: nowrap;
+  }
+ 
+
+
+
+#nav {
+  background-color: $color-marron-claro;
+  grid-area: nav;
+  height: auto; 
+  display: block;
+
+}
+
+/* BarraNav */
+
+.navbar-toggler{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#navbarNav li {
+  list-style: none;
+}
+
+.navbar.show {
+  display: block; /* Mostrar cuando la clase show está presente */
+}
+
+
+#main {
+  background-color: $color-marron-mas-claro;
+  grid-area: main;
+  height: auto;
+  
+}
+
+
+/* Logo WhatsaPP */
+#logoWhats {
+  width: 10vw;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+
+  z-index: 3; 
+}
+
+
+
+#footer {
+  background-color: $color-gris-claro;
+  color: $color-crema; 
+
+  grid-area: footer;
+
+  position: fixed;
+  bottom: 0; 
+  right: 0; 
+
+  height: auto;
+
+}
+
+header, #nav, main, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column; 
+  white-space: nowrap;
+
+  height: auto;
+  width: 100%; 
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: 1.5rem; /* Tamaño de fuente para todos los elementos */
+  max-width: 100%;
+  max-height: 100%;
+
+  font-size: 1.0rem;
+}
+
+/* VERSION MÓVIL (Extra pequeño) */
+@media (min-width: 0px) and (max-width: 479px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "nav nav"
+      "footer footer";
+  }
+
+}
+
+/* VERSION MÓVIL */
+@media (min-width: 480px) and (max-width: 767px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "nav"
+      "footer";
+  }
+
+}
+
+/* VERSION TABLETA */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "nav nav"
+      "footer footer";
+  }
+
+}
+/* VERSION PORTÁTIL */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "nav nav nav"
+      "footer footer footer";
+  }
+}
+
+/* VERSION ESCRITORIO */
+@media (min-width: 1280px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "nav nav nav"
+      "footer footer footer";
+  
+  }
+}
+
+
+/*También podemos configurar estilos dependiendo la orientacion de la pantalla */
+
+@media screen and (orientation: landscape) {
+  /*Estilos en CSS para pantallas en modo horizontal */
+  h1,h2 {
+      text-transform: uppercase;
+  }
+}
+
+
+/* ************************Compra*************************** */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#comanda {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+p {
+  font-weight: bold;
+}
+
+
+// ///MESAS///
+
+
+/* public/assets/css/styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.mesas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.mesa {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mesa:hover {
+  background-color: #e0e0e0;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para las mesas */
+.mesa {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.mesa:hover {
+  border-color: #007bff;
+}
+
+
+/* Efecto de pulso */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.logoMonsterCoffe.pulse img {
+  animation: pulse 1s infinite; /* Aplica la animación de pulso */
+}
